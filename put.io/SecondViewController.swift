@@ -9,9 +9,12 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    var apiKey: String?
+    @IBOutlet weak var apiKeyLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        apiKeyLabel.text = apiKey
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +23,9 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func setAPIKey(key: String) {
+        apiKey = key
+    }
+    
 }
 
